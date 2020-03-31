@@ -1,0 +1,33 @@
+body{
+    background: silver !important;
+}
+
+#content{
+    margin: 0 10px;
+}
+
+.aside{
+  box-sizing: border-box;
+  }
+
+/* create right column */
+.right_column {
+  float: left;
+  width: 80%;
+  padding: 30px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+/* create left columm */
+.left_column {
+  float: left;
+  width: 20%;
+  padding: 40px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

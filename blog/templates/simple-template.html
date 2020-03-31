@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/simple-temp.css' %}">
+
+    <div class="row">
+        <div class="left_column">
+            {% for post in posts %}
+                <div>
+                    <div class="summary-title"><a href="/post/{{ post.slug }}">{{ post.title }}</a></div>
+                    <div class="summary">{{ post.summary }}</div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="right_column">
+            <div>
+                {% block entry %}
+
+                {% endblock %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
